@@ -19,7 +19,7 @@ void DisplayList(vector <string> & list){
     for (unsigned i = 0; i < list.size()-1; i += 1){ // Affichage de la liste des candidats
         cout << list[i] << endl;
     }
-}
+} // DisplayList()
 
 int main(){
     vector <string> listCandidats;
