@@ -22,12 +22,16 @@ void DisplayList(vector <string> & list){
 } // DisplayList()
 
 int main(){
+    // Ajout des candidat dans un tableau de string
     vector <string> listCandidats;
     InsertionCandidat(listCandidats);
     DisplayList(listCandidats);
 
+    // Selection du nombre d'electeur
     int nbElecteur;
     cout << "Nombre d'electeur: ";
     cin >> nbElecteur;
+
+    
     return 0;
 }
