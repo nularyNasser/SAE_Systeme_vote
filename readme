@@ -1,0 +1,68 @@
+Programme d'un système de vote unique transférable
+
+Imaginons une élection demandant l'élection de 2 candidats parmi 4 (A, B, C, D).
+
+Le dépouillement des 100 bulletins exprimés donne :
+
+    ABCD : 28 voix
+    ABDC : 0 voix
+    ACBD : 0 voix
+    ACDB : 14 voix
+
+    ADBC : 0 voix
+    ADCB : 0 voix
+    BACD : 0 voix
+    BADC : 0 voix
+
+    BCAD : 15 voix
+    BCDA : 0 voix
+    BDAC : 0 voix
+    BDCA : 0 voix
+
+    CABD : 17 voix
+    CADB : 0 voix
+    CBAD : 0 voix
+    CBDA : 0 voix
+
+    CDAB : 0 voix
+    CDBA : 0 voix
+    DABC : 0 voix
+    DACB : 0 voix
+
+    DBAC : 0 voix
+    DBCA : 26 voix
+    DCAB : 0 voix
+    DCBA : 0 voix
+
+Le calcul du quota donne Partie_entière( 100 / (2+1) ) + 1 = 34.
+
+Le calcul des voix sur le premier de liste donne :
+
+    A = 28 + 14 = 42 ;
+    B = 15 ;
+    C = 17 ;
+    D = 26.
+
+Le candidat A est donc élu avec 8 voix d'avance (42 – 34) qui sont réparties sur les seconds choix des 42 électeurs ayant voté pour lui, c'est-à-dire sur B et C. On obtient alors au second passage :
+
+    BCD : 28 / 42 × 8 = 5,3 (calcul de 28/42e des 8 voix d'avance car 28 votants sur 42 ont choisi B en second choix)
+    CDB : 14 / 42 × 8 = 2,7 (calcul de 14/42e des 8 voix d'avance car 14 votants sur 42 ont choisi C en second choix))
+    BCD : 15
+    CBD : 17
+    DBC : 26
+
+Le calcul des voix sur le premier de liste donne :
+
+    B = 20,3 ;
+    C = 19,7 ;
+    D = 26.
+
+Personne n'atteint le quota. Le candidat ayant le moins de points est éliminé : c'est C. On obtient donc :
+
+    BD : 5,3
+    DB : 2,7
+    BD : 15
+    BD : 17
+    DB : 26
+
+Le calcul des voix donne B = 37,3 et D = 28,7. B est alors élu par transfert de voix. 
