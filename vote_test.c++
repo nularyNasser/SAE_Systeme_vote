@@ -21,6 +21,11 @@ void DisplayList(vector <string> & list){
     }
 } // DisplayList()
 
+
+// Fonction Depouillement
+// Fonction calcule de quota
+// Fonction repartion des voix du premier gagnant
+
 int main(){
     // Ajout des candidat dans un tableau de string
     vector <string> listCandidats;
