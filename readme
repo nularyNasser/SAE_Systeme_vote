@@ -46,7 +46,7 @@ Le calcul des voix sur le premier de liste donne :
 Le candidat A est donc élu avec 8 voix d'avance (42 – 34) qui sont réparties sur les seconds choix des 42 électeurs ayant voté pour lui, c'est-à-dire sur B et C. On obtient alors au second passage :
 
     BCD : 28 / 42 × 8 = 5,3 (calcul de 28/42e des 8 voix d'avance car 28 votants sur 42 ont choisi B en second choix)
-    CDB : 14 / 42 × 8 = 2,7 (calcul de 14/42e des 8 voix d'avance car 14 votants sur 42 ont choisi C en second choix))
+    CDB : 14 / 42 × 8 = 2,7 (calcul de 14/42e des 8 voix d'avance car 14 votants sur 42 ont choisi C en second choix)
     BCD : 15
     CBD : 17
     DBC : 26
