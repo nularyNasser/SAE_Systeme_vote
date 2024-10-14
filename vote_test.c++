@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <map>
+#include <string>
 
 using namespace std;
 
@@ -37,7 +39,7 @@ void Voter(vector <string> & listCandidats){
 
 int main(){
     // Map vide au départ
-
+    
     // Ajout des candidat dans un tableau de string et les afficher
     vector <string> listCandidats;
     InsertionCandidat(listCandidats);
