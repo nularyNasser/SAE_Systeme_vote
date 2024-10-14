@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <map>
+#include <string>
 
 using namespace std;
 
@@ -22,12 +24,13 @@ void DisplayList(vector <string> & list){
 } // DisplayList()
 
 // Fonction Voter
-void Voter(vector <string> & listCandidats){
+void Voter(vector <string> & listCandidats, map <int, map <string, int>> classement){
     // Faire en sorte qu'on ne puissent pas chosir 2 fois un Candidat
     int choix_candidat;
     for (unsigned i = 0; i < listCandidats.size()-1; i += 1){
         cout << "Choisir un chiffre entre " << 1 << " et " << listCandidats.size()-1 << " : ";
         cin >> choix_candidat;
+        
     }
 }
 
@@ -37,7 +40,7 @@ void Voter(vector <string> & listCandidats){
 
 int main(){
     // Map vide au départ
-
+    map < int, map <string, int> > classement;
     // Ajout des candidat dans un tableau de string et les afficher
     vector <string> listCandidats;
     InsertionCandidat(listCandidats);
@@ -49,7 +52,12 @@ int main(){
     cin >> nbElecteur;
 
     // Demander de voter
-    Voter(listCandidats);
+    Voter(listCandidats, classement);
+
+    map <string, int> test_map;
+    test_map["nasser"] = 18;
+    test_map["nassim"] = 16;
+    test_map["nasma"] = 12;
     
     return 0;
 }
