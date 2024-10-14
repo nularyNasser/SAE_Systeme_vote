@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -21,7 +22,11 @@ void DisplayList(vector <string> & list){
     }
 } // DisplayList()
 
-
+// Fonction Classemnt
+void Classement(vector <string> listCandidats){
+    map<string, int> classement;
+    
+}
 // Fonction Depouillement
 // Fonction calcule de quota
 // Fonction repartion des voix du premier gagnant
