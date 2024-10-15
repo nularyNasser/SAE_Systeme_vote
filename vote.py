@@ -23,3 +23,4 @@ for nb_scrutin in range(nombre_electeur):
         choix_candidat -= 1
         print(f"Vous avez choisi le candidat numéro {candidats[choix_candidat]}")
         print(choix_deja_fait)
+
