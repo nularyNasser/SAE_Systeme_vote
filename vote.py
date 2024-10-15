@@ -24,3 +24,9 @@ for nb_scrutin in range(nombre_electeur):
         print(f"Vous avez choisi le candidat numéro {candidats[choix_candidat]}")
         print(choix_deja_fait)
 
+classement = {
+    1: ['A', 'B', 'C', 'D'],
+    2: ['A', 'C', 'B', 'D'],
+    3: ['B', 'A', 'C', 'D']
+}
+
