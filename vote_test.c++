@@ -25,7 +25,7 @@ void DisplayList(vector <string> & list){
 
 // Fonction Classemnt
 void Classement(vector <string> listCandidats){
-    map <string, int> classement;
+    map <int, vector<string>> classement;
 }
 // Fonction Depouillement
 // Fonction calcule de quota
