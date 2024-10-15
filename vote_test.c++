@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <string>
 
 using namespace std;
 
@@ -24,8 +25,7 @@ void DisplayList(vector <string> & list){
 
 // Fonction Classemnt
 void Classement(vector <string> listCandidats){
-    map<string, int> classement;
-    
+    map <string, int> classement;
 }
 // Fonction Depouillement
 // Fonction calcule de quota
@@ -42,6 +42,6 @@ int main(){
     cout << "Nombre d'electeur: ";
     cin >> nbElecteur;
 
-    
+
     return 0;
 }
