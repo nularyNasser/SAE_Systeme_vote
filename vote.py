@@ -23,10 +23,3 @@ for i in range(len(classement[1])):
         print(10*'-')
         print('A:', compteurA)
         print('B:', compteurB)
-    
-    if compteurA < compteurB:
-        for i in range(len(classement)):
-            classement[i+1].remove('A')
-    else:
-        for i in range(len(classement)):
-            classement[i+1].remove('B')
