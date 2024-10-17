@@ -1,21 +1,5 @@
 # Système de vore Irland
 
-candidats = ['A', 'B', 'C', 'D', 'E', 'F']
-nombre_electeur = int(input("Nombre d'electeur: "))
-choix_candidat: int
-choix_deja_fait = []
-
-
-for nb_scrutin in range(nombre_electeur):
-    print("-----------------------------------")
-    print(f"SCRUTIN NUMERO {nb_scrutin+1}") # Nombre de scrutin
-    
-    for i in range(nombre_electeur):
-        print("Classer par ordre de préférence votre candidat: ")
-        print("---------")
-        for candidat in range(len(candidats)): # Affichage des candidat
-            print(candidats[candidat])
-        
 classement = {
     1: ['A', 'B', 'C', 'D'],
     2: ['A', 'C', 'B', 'D'],
@@ -27,10 +11,22 @@ compteurB = 0
 
 for i in range(len(classement)):
     print(classement[i+1])
-    if classement[i+1][0] == 'A':
-        compteurA += 1
-    elif classement[i+1][0] == 'B':
-        compteurB += 1
 
-print('A:', compteurA)
-print('B:', compteurB)
+for i in range(len(classement[1])):
+    for j in range(len(classement)):
+        print(f"Classement numéro {j+1}")
+        if classement[j+1][0] == 'A':
+            compteurA += 1
+        elif classement[j+1][0] == 'B':
+            compteurB += 1
+
+        print(10*'-')
+        print('A:', compteurA)
+        print('B:', compteurB)
+    
+    if compteurA < compteurB:
+        for i in range(len(classement)):
+            classement[i+1].remove('A')
+    else:
+        for i in range(len(classement)):
+            classement[i+1].remove('B')
