@@ -23,12 +23,12 @@ int main(){
 
     // Demande de classement
     unsigned choiCandidat;
-    for (unsigned i = 1; i <= nbElecteur; i += 1){
+    for (unsigned i = 1; i <= nbElecteur; i += 1){ // BUG ICI !
         cout << "----------------------------------" << endl;
-        cout << "Votant numéro " << i << endl;
+        cout << "Votant numéro " << i+1 << endl;
         vector <string> copyCandidat = candidat;
         unsigned candidatRestant = copyCandidat.size();
-        cout << copyCandidat.size() << endl;
+        cout << candidatRestant << endl;
         for (unsigned j = 0; j < candidatRestant; j += 1){
 
             for (unsigned k = 0; k < candidatRestant; k += 1){
